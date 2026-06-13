@@ -1,0 +1,14 @@
+# DiskFormat has ZERO third-party dependencies.
+#
+# Everything it needs ships with Python on Windows:
+#   - tkinter      (GUI)            — bundled with the Python installer
+#   - subprocess   (PowerShell)     — stdlib
+#   - json         (parsing)        — stdlib
+#   - ctypes       (UAC elevation)  — stdlib
+#   - logging      (audit log)      — stdlib
+#
+# Disk operations are performed by the Windows Storage PowerShell cmdlets
+# (Get-Disk / Get-Partition / Get-Volume / Get-PartitionSupportedSize /
+# Resize-Partition), which are part of Windows 10/11 — no install required.
+#
+# Therefore this file is intentionally empty of packages.
